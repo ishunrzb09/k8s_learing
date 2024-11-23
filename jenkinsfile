@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('git cloning') {
             steps {
-                echo 'Building..'
+                git branch: 'dev', url: 'https://github.com/ishunrzb09/k8s_learing.git'
             }
         }
         stage('Test') {
